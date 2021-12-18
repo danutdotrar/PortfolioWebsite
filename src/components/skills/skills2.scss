@@ -1,0 +1,8 @@
+@import "../../global.scss";
+
+
+.bars{
+    @include mobile{
+        size-adjust: 20%;
+    }
+}

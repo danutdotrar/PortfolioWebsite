@@ -1,0 +1,23 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        //background-color: lightsalmon; // remove if you want to scroll normally with scroll-snap 
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y proximity; //mandatory;
+        scrollbar-width: none; // works only for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
